@@ -1,10 +1,15 @@
 <?php
 
-use App\Http\Controllers\PublicController;
-use App\Http\Controllers\RacesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\RacesController;
+use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
+
+//! Rotte per la Mail
+Route::get('/contact_us', [MailController::class, 'contact_us'])->name('contact_us');
+Route::post('/contact_us/send', [MailController::class, "send_email"])->name('send_email');
 
 //! ROTTE CRUD per le card RACES
 //* Rotte per le Create

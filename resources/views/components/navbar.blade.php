@@ -14,11 +14,11 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Scopri tutte le razze</a>
+                            <a class="nav-link" href="{{route('races.index')}}">Scopri tutte le razze</a>
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="">Crea una nuova razza</a>
+                                <a class="nav-link" href="{{route('races.create')}}">Crea una nuova razza</a>
                             </li>
                         @endauth
                     </ul>

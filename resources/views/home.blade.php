@@ -28,4 +28,6 @@
         </div>
     </header>
 
+    <x-contact_us/>
+    
 </x-layout>

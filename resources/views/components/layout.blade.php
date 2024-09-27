@@ -23,7 +23,7 @@
     {{$slot}} 
     {{--  slot è importasnte altrimenti il contenuto delle nostre pagine non verrà correttamente visualizzato --}}
 
-    <x-contact_us/>
+    
 
     <x-footer />
 

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RacesEditRequest;
-use App\Http\Requests\RacesRequest;
 use App\Models\Races;
-use Illuminate\Http\Request;
-use Illuminate\Container\Attributes\Auth;
+use App\Http\Requests\RacesRequest;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\RacesEditRequest;
 
 class RacesController extends Controller
 {
@@ -41,7 +40,7 @@ class RacesController extends Controller
             'language' => $request->language,
             'subrace' => $request->subrace,
             'img' => $request->file('img')->store('images', 'public'),
-            
+            'user_id'=> Auth::user()->name
         ]);
     }
 
