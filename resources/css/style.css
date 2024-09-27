@@ -46,6 +46,7 @@ body{
     --yellow: #F0AE58;
 }
 
+/* navbar */
 nav{
     font-size: 2rem;
     border-bottom: 2px solid white;
@@ -60,10 +61,24 @@ nav{
     }
 
 .navbar-toggler:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
     opacity: 0.3;
     color: black;
 }
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: rgba(202, 202, 202, 0.327);
+    color: white;
+    border-radius: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+/* navbar end */
 
 h1{
     letter-spacing: 10px;
