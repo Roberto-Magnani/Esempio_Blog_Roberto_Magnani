@@ -166,3 +166,15 @@ table {
     border: 3px solid white; /* Bordo esterno bianco per la tabella */
 }
 
+
+/* form di autenticazione */
+
+.myclass{
+    
+    border-radius: 25px;
+    color: white;
+    
+}
+
+/* fine form di autenticazione */
+

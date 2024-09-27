@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row vh-100 align-content-center justify-content-center">
-            <div class="col-12  col-md-6">
+            <div class="col-12 col-md-6 myclass bg-dark">
                 <div class="display-1">
                     Accedi:
                 </div>
@@ -9,19 +9,19 @@
                 <form method="POST" action="{{route('login')}}">
                     @csrf
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Indirizzo Email:</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                        <label  class="form-label">Indirizzo Email:</label>
+                        <input type="email" class="form-control"  name="email">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                        <label  class="form-label">Password:</label>
+                        <input type="password" class="form-control" name="password">
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Accedi</button>
+                    <button type="submit" class="btn btn-outline-danger">Accedi</button>
                 </form>
-                <div class="mt-5">
+                <div class="mt-5 mb-5">
                     <p>Non sei ancora registrato? Allora che aspetti, fallo subito:</p>
-                    <a href="{{route('register')}}" class="btn btn-primary">Registrati</a>
+                    <a href="{{route('register')}}" class="btn btn-outline-danger">Registrati</a>
                 </div>
             </div>
         </div>

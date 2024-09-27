@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('size');
             $table->string('speed');
             $table->string('language');
-            $table->string('subrace');
+            $table->string('subrace')->nullable();
             //! colonna di uder_id di tipo intero positivo e senza segno
             $table->unsignedBigInteger('user_id')->nullable();
             //! chiave col vincolo di integritá referenziale -> foreign che prende lo stesso nome della colonna

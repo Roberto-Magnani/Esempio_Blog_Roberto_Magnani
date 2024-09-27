@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RacesEditRequest;
+use App\Http\Requests\RacesRequest;
 use App\Models\Races;
 use Illuminate\Http\Request;
+use Illuminate\Container\Attributes\Auth;
 
 class RacesController extends Controller
 {
@@ -12,7 +15,8 @@ class RacesController extends Controller
      */
     public function index()
     {
-        //
+        $races = Races::all();
+        return view('races.index', compact('races'));
     }
 
     /**
@@ -20,15 +24,25 @@ class RacesController extends Controller
      */
     public function create()
     {
-        //
+        return view('races.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(RacesRequest $request)
     {
-        //
+        $race = Races::create([
+            'name' => $request->name,
+            'alignment' => $request->alignment,
+            'age' => $request->age,
+            'size' => $request->size,
+            'speed' => $request->speed,
+            'language' => $request->language,
+            'subrace' => $request->subrace,
+            'img' => $request->file('img')->store('images', 'public'),
+            
+        ]);
     }
 
     /**
@@ -36,7 +50,7 @@ class RacesController extends Controller
      */
     public function show(Races $races)
     {
-        //
+        return view('races.show', compact('race'));
     }
 
     /**
@@ -44,22 +58,43 @@ class RacesController extends Controller
      */
     public function edit(Races $races)
     {
-        //
+        return view('races.edit', compact('race'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Races $races)
+    public function update(RacesEditRequest $request, Races $races)
     {
-        //
+        if ($races->user_id == Auth::user()->id) {
+            $races->update([
+                $races->name = $request->name,
+                $races->alignment = $request->alignment,
+                $races->age = $request->age,
+                $races->speed = $request->speed,
+                $races->size = $request->size,
+                $races->language = $request->language,
+                $races->subrace = $request->subrace,
+                $races->plot = $request->plot,
+            ]);
+            if ($request->img) {
+                $request->validate(['img' => 'img']);
+                $races->update([
+                    $races->img = $request->file('img')->store('public/images'),
+                ]);
+            }
+            return redirect()->route('races.index')->with('successMessage', 'Hai modificato correttamente i dati della tua razza!');
+        } else {
+            return redirect()->route('home')->with('errorMessage', 'Non puoi vedere questa pagina!');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Races $races)
+    public function destroy(Races $race)
     {
-        //
+        $race->delete();
+        return redirect()->route('races.index')->with('message', 'Hai correttamente eliminato la card!');
     }
 }

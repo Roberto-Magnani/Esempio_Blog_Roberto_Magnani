@@ -50,12 +50,25 @@
                     <a class="nav-link" href="{{ route('login') }}">Accedi/Registrati</a>
                 </li>
             @else
-                <li class="nav-item">
-                    <a class="nav-link" href="">Benvenuto: {{ Auth::user()->name }}</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Benvenuto: {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Il mio profilo</a>
+                        </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="">I miei File</a>
+                            </li>
+                        
+                    </ul>
                 </li>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button type="submit" class="btn btn-white text-black">logout</button>
+                    <button type="submit" class="btn btn-outline-danger btn-lg mt-2">logout</button>
                 </form>
             @endguest
         </div>
