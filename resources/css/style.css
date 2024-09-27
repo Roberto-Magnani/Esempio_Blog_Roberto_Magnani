@@ -1,0 +1,153 @@
+body{
+    background-color: black;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Imposta un'altezza fissa o una percentuale basata sul contenuto */
+    overflow: hidden; /* Nascondi le parti dell'immagine che escono dall'area specificata */
+}
+
+.original-image {
+    width: 100%;
+    height: 100%; /* Imposta la dimensione per adattarsi all'area */
+    object-fit: cover; /* Assicura che l'immagine riempia l'area senza distorcersi */
+}
+
+
+
+.overlay-logo {
+     position: absolute;
+    top: 50%; /* Posiziona il logo al centro verticale */
+    left: 50%; /* Posiziona il logo al centro orizzontale */
+    transform: translate(-50%, -50%); /* Centra esattamente il logo */
+    width: 100%; /* Imposta la larghezza per coprire l'immagine */
+    height: 100%; /* Imposta l'altezza per coprire l'immagine */
+   background-color: white;
+    opacity: 0; /* Nasconde l'immagine sovrapposta di default */
+    transition: opacity 1s ease; /* Transizione fluida */
+}
+
+
+.overlay-logo:hover {
+        
+    opacity: 0.6; /* Mantiene il logo visibile anche durante l'hover, se desiderato */
+}
+
+*{
+    font-family: "Mate SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --light:#ffffff;
+    --yellow: #F0AE58;
+}
+
+nav{
+    font-size: 2rem;
+    border-bottom: 2px solid white;
+    
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+.navbar-toggler{
+    border: 2px solid white;
+    }
+
+.navbar-toggler:hover {
+    background-color: white;
+    opacity: 0.3;
+    color: black;
+}
+
+h1{
+    letter-spacing: 10px;
+    font-size: 4rem;
+}
+
+header{
+    background: linear-gradient(transparent, black), url(/public/img/media/taverna.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+body{
+    background-color: black;
+}
+
+
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Imposta la tua altezza specifica se necessario */
+}
+
+.original-image {
+    width: 100%;
+    height: 100%; /* Mantiene le proporzioni */   
+}
+
+
+.overlay-logo {
+     position: absolute;
+    top: 50%; /* Posiziona il logo al centro verticale */
+    left: 50%; /* Posiziona il logo al centro orizzontale */
+    transform: translate(-50%, -50%); /* Centra esattamente il logo */
+    width: 100%; /* Imposta la larghezza per coprire l'immagine */
+    height: 100%; /* Imposta l'altezza per coprire l'immagine */
+   background-color: white;
+    opacity: 0; /* Nasconde l'immagine sovrapposta di default */
+    transition: opacity 1s ease; /* Transizione fluida */
+}
+
+
+.overlay-logo:hover {
+        
+    opacity: 0.6; /* Mantiene il logo visibile anche durante l'hover, se desiderato */
+}
+
+ul{
+    list-style-type: none;
+}
+
+.footer-custom{
+    height: 200px;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 600px;
+}
+
+.modal{
+    max-height: 500px;
+}
+
+li {
+    display: block; /* Rende ogni <li> un blocco, creando una nuova riga */
+    margin-bottom: 10px; /* Aggiunge spazio sotto ogni <li> */
+}
+
+table {
+    margin-top: 5px;
+    border-collapse: collapse; /* Questa proprietà unisce i bordi */
+    width: 100%; /* Imposta la larghezza della tabella */
+}
+th, td {
+    border: 1px solid white; /* Bordo bianco per celle e intestazioni */
+    padding: 8px; /* Padding per le celle */
+    text-align: left; /* Allineamento del testo */
+}
+table {
+    border: 3px solid white; /* Bordo esterno bianco per la tabella */
+}
+
