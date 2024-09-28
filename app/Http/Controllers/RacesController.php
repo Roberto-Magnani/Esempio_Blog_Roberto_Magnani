@@ -22,8 +22,9 @@ class RacesController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('races.create');
+    {   
+        $races = Races::all();
+        return view('races.create', compact('races'));
     }
 
     /**
@@ -31,7 +32,7 @@ class RacesController extends Controller
      */
     public function store(RacesRequest $request)
     {
-        $race = Races::create([
+        $race = Auth::user()->races()->create([
             'name' => $request->name,
             'alignment' => $request->alignment,
             'age' => $request->age,
@@ -39,15 +40,18 @@ class RacesController extends Controller
             'speed' => $request->speed,
             'language' => $request->language,
             'subrace' => $request->subrace,
-            'img' => $request->file('img')->store('images', 'public'),
+            'plot' => $request->plot,
+            'img' => $request->file('img')->store('img', 'public'),
             'user_id'=> Auth::user()->name
         ]);
+
+        return redirect(route('races.index'))->with('status', 'Hai correttamente caricato la tua razza');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Races $races)
+    public function show(Races $race)
     {
         return view('races.show', compact('race'));
     }
@@ -55,7 +59,7 @@ class RacesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Races $races)
+    public function edit(Races $race)
     {
         return view('races.edit', compact('race'));
     }

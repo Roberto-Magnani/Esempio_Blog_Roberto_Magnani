@@ -85,6 +85,12 @@ h1{
     font-size: 4rem;
 }
 
+h2{
+    letter-spacing: 10px;
+    font-size: 3rem;
+    margin-top: 6rem;
+}
+
 header{
     background: linear-gradient(transparent, black), url(/public/img/media/taverna.avif);
     background-size: cover;
