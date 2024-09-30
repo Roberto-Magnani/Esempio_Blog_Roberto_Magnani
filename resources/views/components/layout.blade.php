@@ -10,6 +10,7 @@
     <link rel="icon" href="/img/icone_D&D/icona.png">
     {{-- css --}}
     @vite('resources/css/app.css')
+    @livewireStyles
     {{-- <!-- font --> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
     <x-footer />
 
     @vite('resources/js/app.js')
+    @livewireScripts
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
