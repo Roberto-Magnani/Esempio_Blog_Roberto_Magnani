@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,9 +17,15 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        $languages = ['comune','abissale','celestiale','draconico','elfico','gergo delle profondità','gigante','gnomesco','goblin','halfling','infernale','nanico','orchesco','primordiale','silvano','altro'];
+        foreach ($languages as $language) {
+            DB::table('languages')->insert(
+                [
+                    'name'=>$language,
+                    'created_at'=>Carbon::now(),
+                    'updated_at'=>Carbon::now(),
+                ]
+            );
+        }
     }
 }

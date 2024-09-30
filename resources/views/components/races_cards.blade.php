@@ -1,7 +1,4 @@
 {{-- races_cards.blade.php --}}
-
-
-
 <div class="card bg-dark text-white" style="width: 18rem;">
     <div class="image-container">
         <img src="{{ Storage::url($race->img) }}" class="card-img-top" alt="Immagine di {{ $race['name'] }}">

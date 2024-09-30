@@ -3,24 +3,18 @@
     <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if ($errors->any())
-                <div class="alert alert-danger col-6 text-center">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
+            
             <div class="col-12 col-md-6 mt-5 bg-dark myclass">
-                <h3>Compila tutti dati per la razza che vuoi creare:</h3>
+                @if ($errors->any())
+                    <div class="alert alert-danger text-center mt-3 ">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <h3 class="mt-3">Compila tutti dati per la razza che vuoi creare:</h3>
                 <form method="POST" action="{{ route('races.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
@@ -45,7 +39,12 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">LIngue Conosciute:</label>
-                        <input type="text" class="form-control" name="language">
+                        <br>
+                        <select name="languages[]" id="" class="bg-white text-black" multiple>
+                            @foreach ($languages as $language)
+                                <option value="{{$language->id}}">{{$language->name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Sottorazze:</label>

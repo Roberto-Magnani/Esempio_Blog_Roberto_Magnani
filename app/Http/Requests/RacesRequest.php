@@ -28,7 +28,6 @@ class RacesRequest extends FormRequest
                 'age' => 'required',
                 'size' => 'required',
                 'speed' => 'required',
-                'language' => 'required',
                 'plot' => 'required|min:10',
                 'img' => 'required|image',
             
@@ -43,7 +42,6 @@ class RacesRequest extends FormRequest
                 'age.required'=>'l`età è obbligatoria!',
                 'size.required'=>'La taglia è obbligatoria!',
                 'speed.required'=>'La velocità di movimento è obbligatoria!',
-                'language.required'=>'La lingua è obbligatoria!',
                 'plot.required'=>'Il plot è obbligatorio!',
                 'plot.min'=>'Il plot richiede minimo 10 caratteri!',
                 'img.required'=>'L`immagine della razza è obbligatoria!',

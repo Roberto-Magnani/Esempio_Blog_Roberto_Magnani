@@ -1,20 +1,20 @@
 <x-layout>
 
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            @if ($errors->any())
-                <div class="alert alert-danger col-6 text-center">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+        <div class="row justify-content-center mt-5">
             
-            <div class="col-12 col-md-8">
-                <h1>Apporta lemodifiche alle tua creazione:</h1>
-                <form method="POST" action="{{ route('books.update', compact('book')) }}" enctype="multipart/form-data">
+            <div class="col-12 col-md-8 mt-5 bg-dark myclass">
+                @if ($errors->any())
+                    <div class="alert alert-danger col-6 text-center">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <h1 class="mt-3">Apporta lemodifiche alle tua creazione:</h1>
+                <form method="POST" action="{{ route('races.update', compact('race')) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
@@ -35,24 +35,33 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Velocità di movimento:</label>
-                        <input type="text" class="form-control" name="speed" value="{{ $race->spped }}">
+                        <input type="text" class="form-control" name="speed" value="{{ $race->speed }}">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">LIngue Conosciute:</label>
-                        <input type="text" class="form-control" name="language" value="{{ $race->language }}">
+                        <br>
+                        <select name="languages[]" id="" multiple>
+                            @foreach ($languages as $language)
+                                <option value="{{ $language->id }}" 
+                                    {{ in_array($language->id, $race->languages->pluck('id')->toArray()) ? 'selected' : '' }}>
+                                    {{ $language->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Sottorazze:</label>
-                        <input type="text" class="form-control" name="subrace" value="{{ $race->subrace }}">
+                        <input type="text" class="form-control" name="subrace" value="{{$race->subrace}}">
                     </div>
                     <div class="form-floating mb-3">
                         <label for="floatingTextarea">Descrizione della razza:</label>
-                        <textarea class="form-control" placeholder="Scrivi una trama" name="plot" value="{{ $race->plot }}"></textarea>
+                        <textarea class="form-control" name="plot" value="{{ $race->plot }}"></textarea>
                     </div>
                     <div class="input-group mb-3">
                         <input type="file" class="form-control" name="img">
                     </div>
-                    <button type="submit" class="btn btn-outline-danger">Aggiorna</button>
+                    <button type="submit" class="btn btn-outline-danger mb-3">Aggiorna</button>
                 </form>
             </div>
         </div>

@@ -106,8 +106,8 @@ body{
 
 .image-container {
     position: relative;
-    width: 100%;
-    height: 100%; /* Imposta la tua altezza specifica se necessario */
+    width: 100% !important;
+    height: 100% !important; /* Imposta la tua altezza specifica se necessario */
 }
 
 .original-image {
@@ -184,3 +184,24 @@ table {
 
 /* fine form di autenticazione */
 
+/* tasto Torna su */
+#scrollToTop {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: none; 
+    color: red; 
+    padding: 10px; 
+    border: 2px solid;
+    border-color: red; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+#scrollToTop:hover{
+    background-color: red;
+    color: white;
+}
+
+/* fine tasto Torna su */

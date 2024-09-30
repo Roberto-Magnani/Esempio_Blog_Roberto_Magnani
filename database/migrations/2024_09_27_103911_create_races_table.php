@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('plot');
             $table->string('alignment');
             $table->string('age');
-            $table->string('size');
-            $table->string('speed');
-            $table->string('language');
+            $table->char('size');
+            $table->char('speed');
+            
             $table->string('subrace')->nullable();
             //! colonna di uder_id di tipo intero positivo e senza segno
             $table->unsignedBigInteger('user_id')->nullable();
