@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Races;
+use App\Models\Classes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -51,5 +52,11 @@ class User extends Authenticatable
     public function races(): HasMany
     {
         return $this->hasMany(Races::class);
+    }
+
+    //funzione di relazione one to many tra user e classes
+    public function classes(): HasMany
+    {
+        return $this->hasMany(Classes::class);
     }
 }

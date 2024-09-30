@@ -27,5 +27,16 @@ class DatabaseSeeder extends Seeder
                 ]
             );
         }
+
+        $classes = ['melee, incantatore', 'melee - incantatore'];
+        foreach ($classes as $class) {
+            DB::table('languages')->insert(
+                [
+                    'name'=>$class,
+                    'created_at'=>Carbon::now(),
+                    'updated_at'=>Carbon::now(),
+                ]
+            );
+        }
     }
 }

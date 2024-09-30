@@ -30,11 +30,11 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Scopri tutte le classi</a>
+                            <a class="nav-link" href="{{route('classes.index')}}">Scopri tutte le classi</a>
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="">Crea una nuova classe</a>
+                                <a class="nav-link" href="{{route('classes.create')}}">Crea una nuova classe</a>
                             </li>
                         @endauth
                     </ul>

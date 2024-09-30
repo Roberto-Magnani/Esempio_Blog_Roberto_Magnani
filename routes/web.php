@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClassesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\RacesController;
@@ -27,3 +28,19 @@ Route::put('/aggiorna/race/{race}',[RacesController::class, "update"])->name('ra
 
 //* Rotta per la destroy
 Route::delete('/elimina/race/{race}',[RacesController::class, "destroy"])->name('races.delete');
+
+//! Rotte per classes
+//rotta per la creazione di card book
+Route::get('/classes/create', [ClassesController::class, "create"])->name('classes.create');
+Route::post('/classes/submit',[ClassesController::class, "store"])->name('classes.store');
+
+//* Rotte per la Read
+Route::get('/classes',[ClassesController::class, "index"])->name('classes.index');
+Route::get('/dettaglio/class/{class}',[ClassesController::class, "show"])->name('classes.show');
+
+//* Rotte per l'Update
+Route::get('/modifica/class/{class}',[ClassesController::class, "edit"])->name('classes.edit');
+Route::put('/aggiorna/class/{class}',[ClassesController::class, "update"])->name('classes.update');
+
+//* Rotta per la destroy
+Route::delete('/elimina/class/{class}',[ClassesController::class, "destroy"])->name('classes.delete');

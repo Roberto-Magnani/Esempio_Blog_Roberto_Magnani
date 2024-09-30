@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('saving_throws');
             $table->string('abilities');
             $table->string('equipments');
-            $table->string('others')->nullable;
+            $table->string('others')->nullable();
             //! colonna di uder_id di tipo intero positivo e senza segno
             $table->unsignedBigInteger('user_id')->nullable();
             //! chiave col vincolo di integritá referenziale -> foreign che prende lo stesso nome della colonna

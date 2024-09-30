@@ -71,10 +71,12 @@ class RacesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(RacesEditRequest $request, Races $races)
+    public function update(RacesEditRequest $request, Races $race)
 {
-    if ($races->user_id == Auth::user()->id) {
-        $races->update([
+    
+
+    if ($race->user_id == Auth::user()->id) {
+        $race->update([
             'name' => $request->name,
             'alignment' => $request->alignment,
             'age' => $request->age,
@@ -82,17 +84,12 @@ class RacesController extends Controller
             'size' => $request->size,
             'subrace' => $request->subrace,
             'plot' => $request->plot,
+            'img'=> $request->file('img')->store('img', 'public'),
+
         ]);
 
         // Sincronizza le lingue
-        $races->languages()->sync($request->languages);
-
-        // Carica e aggiorna l'immagine se presente
-        if ($request->hasFile('img')) {
-            $request->validate(['img' => 'image|mimes:jpeg,png,jpg,gif,avif']);
-            $races->img = $request->file('img')->store('public/images');
-            $races->save(); // Salva l'immagine
-        }
+        $race->languages()->sync($request->languages);
 
         return redirect()->route('races.index')->with('successMessage', 'Hai modificato correttamente i dati della tua razza!');
     } else {

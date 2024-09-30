@@ -80,6 +80,16 @@
                     {{ session('status') }}
                 </div>
             @endif
+            @if (session('successMessage'))
+                <div class="alert alert-success text-center mt-3 ">
+                    {{ session('successMessage') }}
+                </div>
+            @endif
+            @if (session('errorMessage'))
+                <div class="alert alert-success text-center mt-3 ">
+                    {{ session('errorMessage') }}
+                </div>
+            @endif
             @forelse ($races as $race)
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
                     <x-races_cards :race="$race" />

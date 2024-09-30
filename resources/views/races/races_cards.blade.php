@@ -5,7 +5,7 @@
             <div class="col-12 col-md-4 d-flex justify-content-center mb-2">
                 <div class="card bg-dark text-white" style="width: 18rem;">
                     <div class="image-container">
-                        <img src="{{ $race['img'] }}" class="card-img-top" alt="Immagine di {{ $race['name'] }}">
+                        <img src="{{Storage::url($race['img']) }}" class="card-img-top" alt="Immagine di {{ $race['name'] }}">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ $race["name"] }}</h5>
