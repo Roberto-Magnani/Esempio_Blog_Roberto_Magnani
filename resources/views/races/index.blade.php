@@ -68,6 +68,9 @@
             <div class="col-12 text-white">
                 <h2 class="text-center">Queste sono le razze iconiche presenti all'interno di D&D:</h2>
             </div>
+
+            <x-races_cards_iconic/>
+
         </div>
     </div>
     <div class="container-fluid">
@@ -75,6 +78,8 @@
             <div class="col-12 text-white">
                 <h2 class="text-center">Ecco alcune razze "Homemade" ideate da altri avventurieri:</h2>
             </div>
+
+
             @if (session('status'))
                 <div class="alert alert-success text-center mt-3 ">
                     {{ session('status') }}
@@ -92,7 +97,7 @@
             @endif
             @forelse ($races as $race)
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
-                    <x-races_cards :race="$race" />
+                    <x-races_cards_homemade :race="$race" />
                 </div>
             @empty
                 <div class="col-12 d-flex justify-content-center">

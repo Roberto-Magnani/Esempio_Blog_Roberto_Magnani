@@ -49,7 +49,7 @@ Route::put('/aggiorna/class/{class}',[ClassesController::class, "update"])->name
 Route::delete('/elimina/class/{class}',[ClassesController::class, "destroy"])->name('classes.delete');
 
 //! Rotta per incantesimi
-Route::get('/incantesimi/index',[IncantesimiController::class, "index"])->name('incantesimi.index');
+Route::get('/incantesimi',[IncantesimiController::class, "index"])->name('incantesimi.index');
 
 //! Rotta per Scheda_pg
-Route::get('/scheda_pg/index',[SchedapgController::class, "index"])->name('scheda_pg.index');
+Route::get('/scheda_pg',[SchedapgController::class, "index"])->name('scheda_pg.index');

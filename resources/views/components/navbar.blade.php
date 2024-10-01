@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/incantesimi">Incantesimi</a>
+                    <a class="nav-link text-white" href="{{route('incantesimi.index')}}">Incantesimi</a>
                 </li>
                 <li>
                     <a class="nav-link text-white" href="{{route('scheda_pg.index')}}">Schede PG</a>

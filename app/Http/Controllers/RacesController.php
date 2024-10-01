@@ -102,11 +102,7 @@ class RacesController extends Controller
      */
     public function destroy(Races $race)
     {
-        // if($race->languages->count()>0){
-        //     foreach($race->languages as $language){
-        //         $language
-        //     };
-        // }
+        
         $race->delete();
         return redirect()->route('races.index')->with('message', 'Hai correttamente eliminato la card!');
     }
