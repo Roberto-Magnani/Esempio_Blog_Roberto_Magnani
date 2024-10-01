@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar />
 
     <!-- header -->
     <header class="container-fluid">
@@ -27,6 +26,8 @@
             </div>
         </div>
     </header>
+
+    <x-carousels/>
 
     <x-contact_us/>
     

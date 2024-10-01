@@ -6,7 +6,7 @@
     <div class="card-body">
         <h5 class="card-title">{{ $class['name'] }}</h5>
         <p class="card-text">{{ Str::limit($class['plot'], 30) }}</p>
-        <a href="{{route('classes.show_class', compact('class'))}}" class="btn btn-dark btn-outline-light">
+        <a href="{{route('classes.show', compact('class'))}}" class="btn btn-dark btn-outline-light">
             Continua a leggere
         </a>
     </div>

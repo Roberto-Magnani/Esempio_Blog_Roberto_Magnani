@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('language_races', function (Blueprint $table) {
             $table->id();
             $table->foreignId('language_id')->nullable()->constrained();
-            $table->foreignId('races_id')->nullable()->constrained();
+            $table->foreignId('races_id')->nullable()->constrained()->onDelete('SET NULL');
             $table->timestamps();
         });
     }

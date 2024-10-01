@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Controllers\ClassesController;
+use App\Http\Controllers\Schedapg;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\RacesController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ClassesController;
+use App\Http\Controllers\IncantesimiController;
+use App\Http\Controllers\SchedapgController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -44,3 +47,9 @@ Route::put('/aggiorna/class/{class}',[ClassesController::class, "update"])->name
 
 //* Rotta per la destroy
 Route::delete('/elimina/class/{class}',[ClassesController::class, "destroy"])->name('classes.delete');
+
+//! Rotta per incantesimi
+Route::get('/incantesimi/index',[IncantesimiController::class, "index"])->name('incantesimi.index');
+
+//! Rotta per Scheda_pg
+Route::get('/scheda_pg/index',[SchedapgController::class, "index"])->name('scheda_pg.index');

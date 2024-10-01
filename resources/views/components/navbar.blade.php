@@ -43,7 +43,7 @@
                     <a class="nav-link text-white" href="/incantesimi">Incantesimi</a>
                 </li>
                 <li>
-                    <a class="nav-link text-white" href="/scheda_pg">Schede PG</a>
+                    <a class="nav-link text-white" href="{{route('scheda_pg.index')}}">Schede PG</a>
                 </li>
                 @guest
                 <li class="nav-item">
