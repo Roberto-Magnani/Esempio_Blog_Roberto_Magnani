@@ -26,7 +26,6 @@ class CreateForm extends Component
     public $saving_throws;
     public $abilities;
     public $equipments;
-
     public $others;
 
 

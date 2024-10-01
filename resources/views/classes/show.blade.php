@@ -27,7 +27,7 @@
                         <p>Creatore: {{ $class->user->name }}</p>
                         <a href="{{ route('classes.index') }}" class="btn btn-outline-danger mt-3 mb-3">Torna Indietro</a>
                         <br>
-                        @if ($class->user->id == Auth::user()->id)
+                        @if ($isAdmin || auth()->user()->id === $class->user_id)
                             <a href="{{ route('classes.edit', compact('class')) }}"
                                 class="btn btn-outline-warning mb-3">Modifica</a>
                             <form action="{{ route('classes.delete', compact('class')) }}" method="POST">

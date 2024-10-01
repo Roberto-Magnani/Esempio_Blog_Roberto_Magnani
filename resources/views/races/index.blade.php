@@ -101,7 +101,7 @@
                 </div>
             @empty
                 <div class="col-12 d-flex justify-content-center">
-                    <h2 class="text-center">Non sono ancora presenti razze homemade.</h2>
+                    <h2 class="text-center text-danger">Non sono ancora presenti razze homemade.</h2>
                 </div>
             @endforelse
 

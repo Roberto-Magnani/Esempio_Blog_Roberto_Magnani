@@ -1,8 +1,5 @@
 <div class="container-fluid">
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 text-white">
-            <h2 class="text-center">Ecco alcune classi "Homemade" ideate da altri avventurieri:</h2>
-        </div>
         @if (session('status'))
             <div class="alert alert-success text-center mt-3 ">
                 {{ session('status') }}

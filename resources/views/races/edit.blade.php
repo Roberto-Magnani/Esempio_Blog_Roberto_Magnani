@@ -13,7 +13,7 @@
                         </ul>
                     </div>
                 @endif
-                <h1 class="mt-3">Apporta lemodifiche alle tua creazione:</h1>
+                <h1 class="mt-3">Apporta le modifiche alle tua creazione:</h1>
                 <form method="POST" action="{{ route('races.update', compact('race')) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

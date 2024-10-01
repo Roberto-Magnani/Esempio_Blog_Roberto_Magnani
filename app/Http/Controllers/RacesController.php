@@ -23,7 +23,7 @@ class RacesController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {   
+    {
         $races = Races::all();
         $languages = Language::all();
         return view('races.create', compact('languages'));
@@ -43,7 +43,7 @@ class RacesController extends Controller
             'subrace' => $request->subrace,
             'plot' => $request->plot,
             'img' => $request->file('img')->store('img', 'public'),
-            'user_id'=> Auth::user()->name
+            'user_id' => Auth::user()->name
         ]);
 
         $race->languages()->attach($request->languages);
@@ -56,7 +56,8 @@ class RacesController extends Controller
      */
     public function show(Races $race)
     {
-        return view('races.show', compact('race'));
+        $isAdmin = Auth::user()->isAdmin();
+        return view('races.show', compact('race', 'isAdmin'));
     }
 
     /**
@@ -64,45 +65,47 @@ class RacesController extends Controller
      */
     public function edit(Races $race)
     {
+        $isAdmin = Auth::user()->isAdmin();
         $languages = Language::all();
-        return view('races.edit', compact('race', 'languages'));
+        return view('races.edit', compact('race', 'languages', 'isAdmin'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(RacesEditRequest $request, Races $race)
-{
-    
+    {
 
-    if ($race->user_id == Auth::user()->id) {
-        $race->update([
-            'name' => $request->name,
-            'alignment' => $request->alignment,
-            'age' => $request->age,
-            'speed' => $request->speed,
-            'size' => $request->size,
-            'subrace' => $request->subrace,
-            'plot' => $request->plot,
-            'img'=> $request->file('img')->store('img', 'public'),
 
-        ]);
+        if ($race->user_id == Auth::user()->id || Auth::user()->isAdmin()) {
+            $race->update([
+                'name' => $request->name,
+                'alignment' => $request->alignment,
+                'age' => $request->age,
+                'speed' => $request->speed,
+                'size' => $request->size,
+                'subrace' => $request->subrace,
+                'plot' => $request->plot,
+                'img' => $request->file('img')->store('img', 'public'),
 
-        // Sincronizza le lingue
-        $race->languages()->sync($request->languages);
+            ]);
 
-        return redirect()->route('races.index')->with('successMessage', 'Hai modificato correttamente i dati della tua razza!');
-    } else {
-        return redirect()->route('races.index')->with('errorMessage', 'Qualcosa è andato storto!');
+            // Sincronizza le lingue
+            $race->languages()->sync($request->languages);
+
+            return redirect()->route('races.index')->with('successMessage', 'Hai modificato correttamente i dati della tua razza!');
+        } else {
+            return redirect()->route('races.index')->with('errorMessage', 'Qualcosa è andato storto!');
+        }
     }
-}
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Races $race)
     {
-        
+
         $race->delete();
         return redirect()->route('races.index')->with('message', 'Hai correttamente eliminato la card!');
     }

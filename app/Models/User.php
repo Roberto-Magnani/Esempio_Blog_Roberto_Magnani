@@ -48,6 +48,12 @@ class User extends Authenticatable
         ];
     }
 
+    //funzione per verificare se l'utente loggato è un admin
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
     //funzione di relazione one to many tra user e races
     public function races(): HasMany
     {

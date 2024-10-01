@@ -45,8 +45,9 @@ class ClassesController extends Controller
      * Display the specified resource.
      */
     public function show(Classes $class)
-    {
-        return view('classes.show', compact('class'));
+    { 
+        $isAdmin = Auth::user()->isAdmin();
+        return view('classes.show', compact('class', 'isAdmin'));
     }
 
     /**
@@ -54,8 +55,8 @@ class ClassesController extends Controller
      */
     public function edit(Classes $class)
     {
-        
-        return view('classes.edit', compact('class'));
+        $isAdmin = Auth::user()->isAdmin();
+        return view('classes.edit', compact('class', 'isAdmin'));
     }
 
     /**
@@ -65,7 +66,7 @@ class ClassesController extends Controller
 {
     
 
-    if ($class->user_id == Auth::user()->id) {
+    if ($class->user_id == Auth::user()->id || Auth::user()->isAdmin()) {
         $class->update([
             'name' => $request->name,
             'class' => $request->class,
