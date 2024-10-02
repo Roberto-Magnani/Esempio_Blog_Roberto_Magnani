@@ -765,14 +765,8 @@
                 </div>
                 <div>
                     <textarea id="urlCopied" style="display:none" rows="1" cols="1"></textarea>
-                    <h6>www.chicken-dinner.com - 5e Point Buy Calculator - Updated 10/22/2022</h6>
-                    <h6>Version 1.12.9: Updated Extra Life charity links for 2022.</h6>
-                    <h6>Find a bug? Just want to say hi? <a href="https://www.reddit.com/message/compose/?to=teaseal"
-                            rel="noopener noreferrer" target="_blank">Contact Me.</a></h6>
-                    <h6>Want to support me? Support Children's Hospitals and donate to my Extra Life charity page
-                        instead! <a
-                            href="https://www.extra-life.org/index.cfm?fuseaction=donorDrive.participant&amp;participantID=501499"
-                            rel="noopener noreferrer" target="_blank">Donate here!</a></h6>
+                    <h5>Trovato un bug? Hai solo voglia di scriverci? <a href="{{ url('/#contact_us') }}"
+                            rel="noopener noreferrer" class="text-danger">Contattaci.</a></h5>
                 </div>
             </div>
         </div>

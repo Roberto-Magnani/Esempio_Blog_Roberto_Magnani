@@ -1,7 +1,8 @@
 <footer class="container-fluid ">
     <div class="row text-white justify-content-around footer-custom bg-dark mt-5 align-items-center">
         <div class="col-12 col-md-4 d-flex justify-content-center">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut doloribus alias a?</p>
+            <p>Hai riscontrato degli errori? Hai solo voglia di scriverci? <a href="{{ url('/#contact_us') }}"
+                rel="noopener noreferrer" class="text-danger">Contattaci.</a></p>
         </div>
         <div class="col-12 col-md-4 d-flex justify-content-center">
             <ul>

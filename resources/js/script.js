@@ -1,6 +1,6 @@
 console.log('ciao');
 
-
+//! bottone up
     // Mostra il bottone "up" quando ci si sposta verso il basso
     window.onscroll = function() {
         const button = document.getElementById('scrollToTop');
@@ -15,6 +15,4 @@ console.log('ciao');
     document.getElementById('scrollToTop').addEventListener('click', function(event) {
         event.preventDefault();
         window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-
-  
+    });  

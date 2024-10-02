@@ -9,16 +9,14 @@
             <h5 class="card-title">Barbaro</h5>
             <p class="card-text">Non tutti i membri delle tribù, ritenuti "barbari" dai rampolli
                 della società civile...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalbarbaro">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalbarbaro">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
     <!-- modale barbaro -->
     <div>
-
-        <div class="modal fade" id="modalbarbaro" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="modalbarbaroLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalbarbaro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -27,7 +25,7 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
+    
                         <p>...hanno la classe di barbaro. Un vero barbaro tra queste persone è così raro
                             come un abile guerriero in
                             una città. Si tratta di un individuo che svolge un ruolo di protettore del
@@ -35,13 +33,13 @@
                         <h3>Privilegi di Classe</h3>
                         <ul>
                             <li><b></b>: </li>
-
+    
                         </ul>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark btn-outline-light"
                             data-bs-dismiss="modal">Close</button>
-
+    
                     </div>
                 </div>
             </div>
@@ -61,9 +59,9 @@
             <h5 class="card-title">Bardo</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalbardo">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalbardo">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -79,9 +77,9 @@
             <h5 class="card-title">Chierico</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalchierico">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalchierico">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -97,9 +95,9 @@
             <h5 class="card-title">Druido</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modaldruido">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modaldruido">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -115,9 +113,9 @@
             <h5 class="card-title">Guerriero</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalguerriero">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalguerriero">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -133,9 +131,9 @@
             <h5 class="card-title">Ladro</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalladro">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalladro">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -151,9 +149,9 @@
             <h5 class="card-title">Mago</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalmago">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalmago">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -169,9 +167,9 @@
             <h5 class="card-title">Monaco</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalmonaco">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalmonaco">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -187,9 +185,9 @@
             <h5 class="card-title">Paladino</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalpaladino">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalpaladino">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -205,9 +203,9 @@
             <h5 class="card-title">Ranger</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalranger">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalranger">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -223,9 +221,9 @@
             <h5 class="card-title">Stregone</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalstregone">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalstregone">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>
@@ -241,9 +239,9 @@
             <h5 class="card-title">Warlock</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                 the card's content.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalwarlock">
-                Visualizza Dettagli</button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalwarlock">
+                    visualizza i dettagli
+                </button>
         </div>
     </div>
 </div>

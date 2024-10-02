@@ -14,7 +14,7 @@ class EditForm extends Component
 {
     use WithFileUploads;
 
-    #[Validate('image|max:1024')] // 1MB Max
+    // #[Validate('image|max:1024')] // 1MB Max
     public $img;
     public $name;
     public $class;
@@ -28,33 +28,31 @@ class EditForm extends Component
     public $abilities;
     public $equipments;
     public $others;
+    public $classId;
 
-    public function mount($classId){
+    public function mount($classId)
+    {
 
-        $classId = Classes::find($classId);
+        $class = Classes::find($classId);
 
-        if($class=Auth::user()->classes()->create || Auth::user()->isAdmin())( 
-            [
-                'name' => $this->name,
-                'class' => $this->class,
-                'pf_dice' => $this->pf_dice,
-                'pf_first' => $this->pf_first,
-                'pf_higher' => $this->pf_higher,
-                'armors' => $this->armors,
-                'weapons' => $this->weapons,
-                'tools' => $this->tools,
-                'saving_throws' => $this->saving_throws,
-                'abilities' => $this->abilities,
-                'equipments' => $this->equipments,
-                'img' => $this->img->store('img', 'public'),                
-                'others' => $this->others
-            ]);
+        $this->name = $class->name;
+        $this->class = $class->class;
+        $this->pf_dice = $class->pf_dice;
+        $this->pf_first = $class->pf_first;
+        $this->pf_higher = $class->pf_higher;
+        $this->armors = $class->armors;
+        $this->weapons = $class->weapons;
+        $this->tools = $class->tools;
+        $this->saving_throws = $class->saving_throws;
+        $this->abilities = $class->abilities;
+        $this->equipments = $class->equipments;
+        $this->others = $class->others;
     }
 
     public function save()
     {
         // Assicurati che il file sia caricato prima di salvarlo
-        $this->validate();
+        // $this->validate();
 
         $data = [
             'name' => $this->name,
@@ -70,17 +68,20 @@ class EditForm extends Component
             'equipments' => $this->equipments,
             'others' => $this->others,
         ];
-        
+
         // Se è presente un'immagine, memorizzala
         if ($this->img) {
+            if($this->validate(['img'=> 'image'])){
             $data['img'] = $this->img->store('img', 'public');
-        }
+        }}
 
         // Salva o aggiorna la classe
         Classes::updateOrCreate(['id' => $this->classId], $data);
 
         // Aggiungi un messaggio di successo o reindirizza
         session()->flash('message', 'Classe modificata con successo!');
+
+        return redirect(route('classes.index'));
     }
 
     public function render()

@@ -1,5 +1,5 @@
 <!-- section contact_us -->
-<section class="container">
+<section class="container" id="contact_us">
     <div class="row justify-content-center">
         <div class="col-12 text-white text-center my-5">
             <h2>CONTATTACI</h2>

@@ -131,7 +131,7 @@ body{
 
 .overlay-logo:hover {
         
-    opacity: 0.6; /* Mantiene il logo visibile anche durante l'hover, se desiderato */
+    opacity: 0.8; /* Mantiene il logo visibile anche durante l'hover, se desiderato */
 }
 
 ul{

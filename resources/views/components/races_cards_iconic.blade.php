@@ -9,8 +9,9 @@
             <h5 class="card-title">Dragonide</h5>
             <p class="card-text">Il dragonide è un umanoide Medio con pelle a scaglie,
                 mani e piedi artigliati e lineamenti da drago... </p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modaldragonide">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                data-bs-target="#Modaldragonide">
                 Continua a leggere
             </button>
         </div>
@@ -18,10 +19,9 @@
 
     <!-- modale dragonide -->
     <div>
-
-        <div class="modal fade" id="modaldragonide" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modaldragonideLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable bg-dark">
+        <div class="modal fade" id="Modaldragonide" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h4 class="modal-title fs-5" id="modal2Label">Continua a leggere...</h4>
@@ -29,8 +29,7 @@
                     </div>
                     <div class="modal-body">
                         <h3>Tratti dei Dragonidi</h3>
-                        ...(sebbene
-                        privi di coda o ali), oltre ad alcune caratteristiche di una
+                        ...(sebbene privi di coda o ali), oltre ad alcune caratteristiche di una
                         specifica specie di vero drago.
                         <ul>
                             <li><b>Allineamento</b>: La maggior parte dei dragonidi sono
@@ -40,7 +39,6 @@
                             <li><b>Età</b>: Un dragonide di 3 anni è l’equivalente di un
                                 bambino umano di 10 anni, e raggiunge la maggiore
                                 età a 15 anni. Di solito vive fino a 80 anni.
-
                             </li>
                             <li><b>Incremento di Punteggio di Abilità</b>: Il tuo punteggio di
                                 <b>Forza</b> aumenta di "2" e il tuo punteggio di <b>Carisma</b>
@@ -143,16 +141,19 @@
                                 </tr>
                             </table>
                         </ul>
-
-
-
                     </div>
+                    {{-- bottone chiusura --}}
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark btn-outline-light"
                             data-bs-dismiss="modal">Close</button>
-
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modaldragonide" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="modaldragonideLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable bg-dark">
+
             </div>
         </div>
     </div>
@@ -169,17 +170,15 @@
             <h5 class="card-title">Drow</h5>
             <p class="card-text">Non fosse per qualche eccezione, la razza dei drow sarebbe universalmente
                 disprezzata.</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modaldrow">
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modaldrow">
                 Continua a leggere
             </button>
         </div>
 
         <!-- modale drow -->
         <div>
-
-            <div class="modal fade" id="modaldrow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="modaldrowLabel" aria-hidden="true">
+            <div class="modal fade" id="Modaldrow" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable bg-dark">
                     <div class="modal-content bg-dark text-white">
                         <div class="modal-header">
@@ -252,6 +251,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -267,17 +267,16 @@
             <h5 class="card-title">Elfo</h5>
             <p class="card-text">Gli elfi sono un popolo magico munito di grazia
                 ultraterrena, che vive nel mondo materiale... </p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalelfo">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalelfo">
+                    Continua a leggere
+                </button>
         </div>
     </div>
     <!-- modale elfi -->
     <div>
+        <!-- Modal -->
+        <div class="modal fade" id="Modalelfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-        <div class="modal fade" id="modalelfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modalelfoLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -407,6 +406,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -421,17 +421,15 @@
             <h5 class="card-title">Gnomo</h5>
             <p class="card-text">Un ronzio costante di attività pervade le zone ed i quartieri
                 dove gli gnomi costituiscono le loro...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modaldgnomo">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalgnomo">
+                    Continua a leggere
+                </button>
         </div>
     </div>
     <!-- modale gnomo -->
     <div>
-
-        <div class="modal fade" id="modaldgnomo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modaldgnomoLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalgnomo" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -558,18 +556,16 @@
             <h5 class="card-title">Halfling</h5>
             <p class="card-text">L’agio di casa è l’obiettivo della vita della maggior parte dei
                 halfling...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalhalfling">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalhalfling">
+                    Continua a leggere
+                </button>
         </div>
     </div>
 
     <!-- modale halfling -->
     <div>
-
-        <div class="modal fade" id="modalhalfling" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="modalhalflingfoLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalhalfling" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -663,18 +659,16 @@
             <h5 class="card-title">Mezzoelfo</h5>
             <p class="card-text">I mezzelfi combinano quelle che, secondo alcuni, sono le migliori qualità
                 delle due razze... </p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalmezzelfo">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalmezzelfo">
+                    Continua a leggere
+                </button>
         </div>
     </div>
 
     <!-- modale mezzelfo -->
     <div>
-
-        <div class="modal fade" id="modalmezzelfo" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="modalmezzelfoLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalmezzelfo" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -742,18 +736,16 @@
             <h5 class="card-title">Mezzorco</h5>
             <p class="card-text">Alcuni mezzorchi ambiscono a diventare gloriosi capi della
                 tribù degli orchi...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalmezzorco">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalmezzorco">
+                    Continua a leggere
+                </button>
         </div>
     </div>
 
     <!-- modale mezzorco -->
     <div>
-
-        <div class="modal fade" id="modalmezzorco" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="modalmezzorcoLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalmezzorco" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -822,17 +814,15 @@
             <h5 class="card-title">Nano</h5>
             <p class="card-text">Regni ricchi di antica gloria, sale scavate nelle radici delle
                 montagne...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalnano">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modalnano">
+                    Continua a leggere
+                </button>
         </div>
     </div>
     <!-- modale nano -->
     <div>
-
-        <div class="modal fade" id="modalnano" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modalnanoLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalnano" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -935,17 +925,15 @@
             <h5 class="card-title">Tiefling</h5>
             <p class="card-text">Essere accolti con sguardi diffidenti e ostili, bisbigli e sussurri
                 malevoli...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modaltiefling">
-                Continua a leggere
-            </button>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modaltiefling">
+                    Continua a leggere
+                </button>
         </div>
     </div>
     <!-- modale tiefling -->
     <div>
-
-        <div class="modal fade" id="modaltiefling" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="modaltieflingLabel" aria-hidden="true">
+        <div class="modal fade" id="Modaltiefling" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -1258,16 +1246,16 @@
             <h5 class="card-title">Umano</h5>
             <p class="card-text">Nella maggior parte dei mondi, gli umani sono la razza più
                 giovane, ultimi ad arrivare sulla scena...</p>
-            <button type="button" class="btn btn-dark btn-outline-light" data-toggle="modal"
-                data-bs-target="#staticBackdrop" data-target="#modalumano">
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                data-bs-target="#Modalumano">
                 Continua a leggere
             </button>
         </div>
     </div>
     <!-- modale umano -->
     <div>
-        <div class="modal fade" id="modalumano" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modalumanoLabel" aria-hidden="true">
+        <div class="modal fade" id="Modalumano" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable bg-dark">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">

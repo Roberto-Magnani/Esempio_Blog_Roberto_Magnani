@@ -12,7 +12,7 @@ class Classes extends Model
 
     public $fillable = ['name', 'class', 'pf_dice', 'pf_first', 'pf_higher', 'armors', 'weapons', 'tools', 'saving_throws', 'abilities', 'equipments', 'img', 'others'];
 
-    //funzionr di relazione inversa user e races
+    //funzionr di relazione inversa user e classes
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

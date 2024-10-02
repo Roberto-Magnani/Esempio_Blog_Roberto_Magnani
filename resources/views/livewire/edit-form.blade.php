@@ -1,6 +1,6 @@
 <div>
-    
-    <form wire:submit="">
+
+    <form wire:submit="save">
         <div class="mb-3">
             <label class="form-label">Nome Classe:</label>
             <input type="text" class="form-control" wire:model="name">
